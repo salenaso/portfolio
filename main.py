@@ -33,23 +33,23 @@ class IndexHandler(webapp2.RequestHandler):
 class FamilyHandler(webapp2.RequestHandler):
     def get(self):
     	template = JINJA_ENVIRONMENT.get_template('templates/portfolio.html')
-    	self.response.write(template.render())
+    	self.response.write(template.render({'title': 'PORTFOLIO'}))
 
 
 class FoodHandler(webapp2.RequestHandler):
     def get(self):
     	template = JINJA_ENVIRONMENT.get_template('templates/resume.html')
-    	self.response.write(template.render())
+    	self.response.write(template.render({'title': 'RESUME'}))
 
 class TravelsHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('templates/travels.html')
-        self.response.write(template.render())   
+        self.response.write(template.render({'title': 'TRAVELS'}))   
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('templates/contact.html')
-        self.response.write(template.render())
+        self.response.write(template.render({'title': 'CONTACT'}))
     def post(self):
         stguess=self.request.get('name')
         logging.info(stguess)

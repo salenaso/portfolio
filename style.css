@@ -38,6 +38,17 @@
 		display: inline-block;
 	}
 
+	.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+		background-color:red;
+	}
+
+
+
+
+
+
+
+
 
 
 	
@@ -52,6 +63,11 @@
 
 	footer{
 		text-align: center;
+	}
+
+		.social{
+		display: inline-block;
+		padding: .5em;
 	}
 
 	
@@ -89,6 +105,10 @@
 	}
 }
 @media (min-width: 800px){
+
+	header{
+		background-image: url("hafez.jpg");
+	}
 	body{
 		
 	}	
@@ -97,6 +117,7 @@
 		text-align: right;
 
 	}
+
 
 
 
@@ -123,5 +144,23 @@
 		display: inline-block;
 		
 		padding: .5em;
+	}
+
+
+
+	.twitter:after{
+		content: "twitter";
+	}
+
+	.vsco:after{
+		content: "vsco"
+	}
+
+	.linked:after{
+		content: "linkedin"
+	}
+
+	.insta:after{
+		content: "instagram"
 	}
 }
